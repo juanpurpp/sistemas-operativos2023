@@ -1,15 +1,17 @@
 #include <string.h> 
 #include <stdio.h>
 const char* stringReverse(char str[]){
-    char result[strlen(str)];
-  for(int i = 0; i<strlen(str); i++){
-    result[i] = str[strlen(str)-i];
+
+ int length = strlen(str);
+     char result[length];
+  for(int i = 0; i<length; i++){
+    result[i] = str[length-1-i];
   }
+  printf("%s", result);
   return result;
 }
 int main(void) {
   char input[20];
   scanf("%s", &input);
-  printf("%s",stringReverse(input) );
   return 0;
 }
